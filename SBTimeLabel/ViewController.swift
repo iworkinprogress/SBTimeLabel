@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var stopwatchLabel:SBTimeLabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        stopwatchLabel.start()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func toggleStopWatch(button:UIButton) {
+        if stopwatchLabel.isRunning {
+            stopwatchLabel.pause()
+            button.setTitle("Start", for: .normal)
+        } else {
+            stopwatchLabel.start()
+            button.setTitle("Pause", for: .normal)
+        }
     }
-
 
 }
 

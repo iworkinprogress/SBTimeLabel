@@ -13,6 +13,7 @@
 		246DBBD11DB6914A0080EB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246DBBD01DB6914A0080EB94 /* Assets.xcassets */; };
 		246DBBD41DB6914A0080EB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246DBBD21DB6914A0080EB94 /* LaunchScreen.storyboard */; };
 		246DBBDF1DB6914A0080EB94 /* SBTimeLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DBBDE1DB6914A0080EB94 /* SBTimeLabelTests.swift */; };
+		246DBBEB1DB6937F0080EB94 /* SBTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DBBEA1DB6937F0080EB94 /* SBTimeLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		246DBBDA1DB6914A0080EB94 /* SBTimeLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTimeLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246DBBDE1DB6914A0080EB94 /* SBTimeLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTimeLabelTests.swift; sourceTree = "<group>"; };
 		246DBBE01DB6914A0080EB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SBTimeLabelTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		246DBBEA1DB6937F0080EB94 /* SBTimeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBTimeLabel.swift; path = SBTimeLabel/SBTimeLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		246DBBC81DB6914A0080EB94 /* SBTimeLabel */ = {
 			isa = PBXGroup;
 			children = (
+				246DBBE91DB6935A0080EB94 /* SBTimeLabel */,
 				246DBBC91DB6914A0080EB94 /* AppDelegate.swift */,
 				246DBBCB1DB6914A0080EB94 /* ViewController.swift */,
 				246DBBCD1DB6914A0080EB94 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				246DBBE01DB6914A0080EB94 /* Info.plist */,
 			);
 			path = SBTimeLabelTests;
+			sourceTree = "<group>";
+		};
+		246DBBE91DB6935A0080EB94 /* SBTimeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				246DBBEA1DB6937F0080EB94 /* SBTimeLabel.swift */,
+			);
+			name = SBTimeLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				246DBBCC1DB6914A0080EB94 /* ViewController.swift in Sources */,
+				246DBBEB1DB6937F0080EB94 /* SBTimeLabel.swift in Sources */,
 				246DBBCA1DB6914A0080EB94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
