@@ -18,7 +18,7 @@ enum TimerAccurracy {
     case seconds
 }
 
-class SBTimeLabel: UILabel {
+open class SBTimeLabel: UILabel {
     
     var type:TimerType = .stopwatch
     var accurracy:TimerAccurracy = .seconds
