@@ -14,6 +14,7 @@
 		246DBBD41DB6914A0080EB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246DBBD21DB6914A0080EB94 /* LaunchScreen.storyboard */; };
 		246DBBDF1DB6914A0080EB94 /* SBTimeLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DBBDE1DB6914A0080EB94 /* SBTimeLabelTests.swift */; };
 		246DBBEB1DB6937F0080EB94 /* SBTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DBBEA1DB6937F0080EB94 /* SBTimeLabel.swift */; };
+		246DBC011DB728550080EB94 /* SBTimeLabel.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 246DBC001DB728550080EB94 /* SBTimeLabel.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		246DBBDE1DB6914A0080EB94 /* SBTimeLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTimeLabelTests.swift; sourceTree = "<group>"; };
 		246DBBE01DB6914A0080EB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SBTimeLabelTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		246DBBEA1DB6937F0080EB94 /* SBTimeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBTimeLabel.swift; path = SBTimeLabel/SBTimeLabel.swift; sourceTree = "<group>"; };
+		246DBC001DB728550080EB94 /* SBTimeLabel.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SBTimeLabel.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		246DBBBD1DB6914A0080EB94 = {
 			isa = PBXGroup;
 			children = (
+				246DBC001DB728550080EB94 /* SBTimeLabel.podspec */,
 				246DBBC81DB6914A0080EB94 /* SBTimeLabel */,
 				246DBBDD1DB6914A0080EB94 /* SBTimeLabelTests */,
 				246DBBC71DB6914A0080EB94 /* Products */,
@@ -193,6 +196,7 @@
 				246DBBD41DB6914A0080EB94 /* LaunchScreen.storyboard in Resources */,
 				246DBBD11DB6914A0080EB94 /* Assets.xcassets in Resources */,
 				246DBBCF1DB6914A0080EB94 /* Main.storyboard in Resources */,
+				246DBC011DB728550080EB94 /* SBTimeLabel.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

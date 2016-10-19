@@ -55,7 +55,7 @@ open class SBTimeLabel: UILabel {
     }
     
     //MARK: - Dynamic Properties
-    var isRunning: Bool {
+    open var isRunning: Bool {
         get {
             if let timer = self.timer {
                 return timer.isValid
@@ -65,7 +65,7 @@ open class SBTimeLabel: UILabel {
         }
     }
     
-    var elapsedTimeAsDate: Date {
+    open var elapsedTimeAsDate: Date {
         get {
             return Date(timeIntervalSince1970: elapsedTime)
         }
@@ -81,7 +81,7 @@ open class SBTimeLabel: UILabel {
     }
     
     //MARK: - Controls
-    func start() {
+    open func start() {
         timer?.invalidate()
         
         timer = Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true, block: { (timer) in
@@ -93,7 +93,7 @@ open class SBTimeLabel: UILabel {
         startDate = Date()
     }
     
-    func pause() {
+    open func pause() {
         timer?.invalidate()
     }
 }
