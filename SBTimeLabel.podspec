@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'SBTimeLabel'
   s.version          = '1.0.0'
   s.summary          = 'A short description of SBTimeLabel.'
+  s.module_name      = 'SBTimeLabel'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,17 +27,10 @@ Label that displays elapsed time (Stopwatch, Countdown, Current Time)
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Steven Baughman' => 'steve@iworkinprogress.com' }
   s.source           = { :git => 'https://github.com/iworkinprogress/SBTimeLabel.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/iworkinprogress'
+  s.social_media_url = 'https://twitter.com/iworkinprogress'
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'SBTimeLabel/SBTimeLabel/**/*'
   
-  # s.resource_bundles = {
-  #   'SBTimeLabel' => ['SBTimeLabel/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
