@@ -51,7 +51,9 @@ open class SBTimeLabel: UILabel {
     
     private func incrementTime() {
         self.elapsedTime += self.timeInterval
-        self.updateText()
+        DispatchQueue.main.async() { () -> Void in
+            self.updateText()
+        }
     }
     
     //MARK: - Dynamic Properties
@@ -84,9 +86,13 @@ open class SBTimeLabel: UILabel {
     open func start() {
         timer?.invalidate()
         
-        timer = Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true, block: { (timer) in
+        timer = Timer(timeInterval: self.timeInterval, repeats: true, block: { (timer) in
             self.incrementTime()
         })
+        
+        // Add Timer
+        RunLoop.main.add(timer!, forMode: .commonModes)
+        
         // Set Tolerance to 10% of timer, as suggested by Apple Docs
         timer?.tolerance = self.timeInterval / 10.0
         
