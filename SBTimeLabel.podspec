@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBTimeLabel'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A short description of SBTimeLabel.'
   s.module_name      = 'SBTimeLabel'
 

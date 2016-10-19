@@ -29,7 +29,7 @@ open class SBTimeLabel: UILabel {
     private var endDate:Date?
     private var elapsedTime:TimeInterval = 0
     
-    private lazy var dateFormatter:DateFormatter = {
+    open lazy var dateFormatter:DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
