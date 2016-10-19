@@ -9,14 +9,14 @@
 import XCTest
 @testable import SBTimeLabel
 
-class SBTimeLabelTests: XCTestCase {
+open class SBTimeLabelTests: XCTestCase {
     
-    override func setUp() {
+    override open func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
-    override func tearDown() {
+    override open func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
