@@ -56,7 +56,7 @@ open class SBTimeLabel: UILabel {
         }
     }
     
-    //MARK: - Dynamic Properties
+    //MARK: - Computed Properties
     open var isRunning: Bool {
         get {
             if let timer = self.timer {
@@ -70,6 +70,12 @@ open class SBTimeLabel: UILabel {
     open var elapsedTimeAsDate: Date {
         get {
             return Date(timeIntervalSince1970: elapsedTime)
+        }
+    }
+    
+    open var duration:TimeInterval {
+        get {
+            return elapsedTime
         }
     }
     
