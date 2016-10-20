@@ -25,8 +25,8 @@ open class SBTimeLabel: UILabel {
     static var dateFormat = "HH:mm:ss"
     
     private var timer:Timer?
-    private var startDate:Date?
-    private var endDate:Date?
+    open var startDate:Date?
+    open var endDate:Date?
     private var elapsedTime:TimeInterval = 0
     
     open lazy var dateFormatter:DateFormatter = {
@@ -40,9 +40,9 @@ open class SBTimeLabel: UILabel {
         var string:String!
         switch type {
             case .stopwatch:
-                string = dateFormatter.string(from: self.elapsedTimeAsDate)
+                string = dateFormatter.string(from: elapsedTimeAsDate)
             case .countdown:
-                string = dateFormatter.string(from: self.elapsedTimeAsDate)
+                string = dateFormatter.string(from: elapsedTimeAsDate)
             case .clock:
                 string = dateFormatter.string(from: Date())
         }
@@ -50,7 +50,7 @@ open class SBTimeLabel: UILabel {
     }
     
     private func incrementTime() {
-        self.elapsedTime += self.timeInterval
+        elapsedTime += timeInterval
         DispatchQueue.main.async() { () -> Void in
             self.updateText()
         }
@@ -95,11 +95,25 @@ open class SBTimeLabel: UILabel {
         
         // Set Tolerance to 10% of timer, as suggested by Apple Docs
         timer?.tolerance = self.timeInterval / 10.0
-        
-        startDate = Date()
+        if startDate == nil {
+            startDate = Date()
+        }
     }
     
     open func pause() {
         timer?.invalidate()
+        endDate = Date()
+    }
+    
+    // Is there a difference between pause and stop
+    open func stop() {
+        pause()
+    }
+    
+    open func reset() {
+        stop()
+        startDate = nil
+        elapsedTime = 0
+        self.updateText()
     }
 }
