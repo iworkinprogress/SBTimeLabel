@@ -25,9 +25,9 @@ open class SBTimeLabel: UILabel {
     static var dateFormat = "HH:mm:ss"
     
     private var timer:Timer?
+    private var pausedTime:TimeInterval  = 0
     open var startDate:Date?
     open var endDate:Date?
-    private var elapsedTime:TimeInterval = 0
     
     open lazy var dateFormatter:DateFormatter = {
         let formatter = DateFormatter()
@@ -50,7 +50,6 @@ open class SBTimeLabel: UILabel {
     }
     
     private func incrementTime() {
-        elapsedTime += timeInterval
         DispatchQueue.main.async() { () -> Void in
             self.updateText()
         }
@@ -69,13 +68,17 @@ open class SBTimeLabel: UILabel {
     
     open var elapsedTimeAsDate: Date {
         get {
-            return Date(timeIntervalSince1970: elapsedTime)
+            return Date(timeIntervalSince1970: duration)
         }
     }
     
     open var duration:TimeInterval {
         get {
-            return elapsedTime
+            if let startDate = self.startDate {
+                return Date().timeIntervalSince(startDate) - pausedTime
+            } else {
+                return 0
+            }
         }
     }
     
@@ -104,6 +107,12 @@ open class SBTimeLabel: UILabel {
         if startDate == nil {
             startDate = Date()
         }
+        
+        if let endDate = self.endDate {
+            // was paused, add time to pausedTime
+            pausedTime += Date().timeIntervalSince(endDate)
+            self.endDate = nil
+        }
     }
     
     open func pause() {
@@ -119,7 +128,7 @@ open class SBTimeLabel: UILabel {
     open func reset() {
         stop()
         startDate = nil
-        elapsedTime = 0
+        endDate = nil
         self.updateText()
     }
 }
