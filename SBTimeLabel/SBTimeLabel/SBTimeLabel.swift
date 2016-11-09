@@ -84,7 +84,8 @@ open class SBTimeLabel: UILabel {
     open var duration:TimeInterval {
         get {
             if let startDate = self.startDate {
-                return Date().timeIntervalSince(startDate) - pausedTime
+                let endDate = self.endDate ?? Date()
+                return endDate.timeIntervalSince(startDate) - pausedTime
             } else {
                 return 0
             }

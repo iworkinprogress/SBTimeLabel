@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,6 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw0-22-gtP" customClass="SBTimeLabel" customModule="SBTimeLabel" customModuleProvider="target">
+                                <rect key="frame" x="16" y="92" width="343" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="rys-Aj-Fwg"/>
                                 </constraints>
@@ -28,6 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-1V-MuU">
+                                <rect key="frame" x="137.5" y="182" width="100" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Tpz-al-sX1"/>
                                     <constraint firstAttribute="height" constant="44" id="pBY-Xm-T0A"/>
@@ -37,18 +42,45 @@
                                     <action selector="toggleStopWatchWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSS-70-TAi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRq-G6-SU6" customClass="SBTimeLabel" customModule="SBTimeLabel" customModuleProvider="target">
+                                <rect key="frame" x="16" y="257" width="343" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="jKZ-Pn-Iu1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJV-hN-GdX">
+                                <rect key="frame" x="137" y="347" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="t1M-AY-Wk5"/>
+                                    <constraint firstAttribute="height" constant="44" id="zKj-fH-got"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="toggleStopWatch2WithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqo-gF-ZYM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="xw0-22-gtP" secondAttribute="leading" id="2fd-zy-Bng"/>
+                            <constraint firstItem="LRq-G6-SU6" firstAttribute="top" secondItem="M3V-1V-MuU" secondAttribute="bottom" constant="31" id="Bgr-jo-l8M"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="LRq-G6-SU6" secondAttribute="leading" id="Dqe-uo-Sre"/>
+                            <constraint firstItem="lJV-hN-GdX" firstAttribute="top" secondItem="LRq-G6-SU6" secondAttribute="bottom" constant="8" id="Exv-Wb-O2I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xw0-22-gtP" secondAttribute="trailing" id="Q8e-03-QYP"/>
                             <constraint firstItem="M3V-1V-MuU" firstAttribute="top" secondItem="xw0-22-gtP" secondAttribute="bottom" constant="8" id="RxV-RM-Hdg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LRq-G6-SU6" secondAttribute="trailing" id="TSN-g4-0UX"/>
+                            <constraint firstItem="lJV-hN-GdX" firstAttribute="centerX" secondItem="LRq-G6-SU6" secondAttribute="centerX" id="aAa-aD-GBg"/>
+                            <constraint firstItem="LRq-G6-SU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dcF-LB-oqq"/>
                             <constraint firstItem="M3V-1V-MuU" firstAttribute="centerX" secondItem="xw0-22-gtP" secondAttribute="centerX" id="njb-Qu-wYZ"/>
                             <constraint firstItem="xw0-22-gtP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="rB2-tB-3cL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="stopwatchLabel" destination="xw0-22-gtP" id="bj5-yO-dGS"/>
+                        <outlet property="stopwatchLabel2" destination="LRq-G6-SU6" id="ybe-Pm-bXh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
