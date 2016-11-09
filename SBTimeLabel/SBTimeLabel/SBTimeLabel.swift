@@ -126,8 +126,10 @@ open class SBTimeLabel: UILabel {
     }
     
     open func pause() {
-        timer?.invalidate()
-        endDate = Date()
+        if isRunning {
+            timer?.invalidate()
+            endDate = Date()
+        }
     }
     
     // Is there a difference between pause and stop
