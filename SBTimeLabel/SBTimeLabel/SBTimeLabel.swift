@@ -18,6 +18,10 @@ enum TimerAccurracy {
     case seconds
 }
 
+public protocol SBTimeLabelDelegate {
+    func didUpdateText(_ label:SBTimeLabel)
+}
+
 open class SBTimeLabel: UILabel {
     
     var type:TimerType = .stopwatch
@@ -28,6 +32,8 @@ open class SBTimeLabel: UILabel {
     private var pausedTime:TimeInterval  = 0
     open var startDate:Date?
     open var endDate:Date?
+    
+    open var delegate:SBTimeLabelDelegate?
     
     open lazy var dateFormatter:DateFormatter = {
         let formatter = DateFormatter()
@@ -47,6 +53,9 @@ open class SBTimeLabel: UILabel {
                 string = dateFormatter.string(from: Date())
         }
         text = string
+        
+        // Notify Delegate
+        delegate?.didUpdateText(self)
     }
     
     private func incrementTime() {
